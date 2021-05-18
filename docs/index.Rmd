@@ -42,40 +42,442 @@ xaringanExtra::use_search(show_icon = TRUE)
 </br>
 
 
-- [**TÓPICO X**](#)
+- [**INTRODUÇÃO**](#introducao)
 
 
 </br>
 
 
-- [**TÓPICO X**](#)
+- [**FLUXO CIRCULAR DA RENDA (SIMPLIFICADO)**](#fcr_simplificado)
 
 
 </br>
 
 
-- [**TÓPICO X**](#)
+- [**FLUXO CIRCULAR DA RENDA (AMPLIADO)**](#fcr_ampliado)
 
 
 </br>
 
 
-- [**TÓPICO X**](#)
+- [**PRODUTO INTERNO BRUTO (PIB)**](#pib)
 
 
 ---
 class: inverse, center, middle 
-name: 
+name: introducao
 
 
-## NOME DO TÓPICO 1
+## INTRODUÇÃO
 
 
 ---
 <div style="text-align: justify">
 
 
-## NOME DO TÓPICO 1
+## INTRODUÇÃO
+
+
+**CONCEITOS**
+
+
+</br>
+  
+  
+- Para entender o funcionamento básico da economia de um país é útil iniciar a apresentação por meio 
+da definição de 3 conceitos iniciais da macroeconomia, são eles:
+  
+</br>
+
+  - **PRODUTO AGREGADO** (OU OFERTA AGREGADA);
+  
+  - **RENDA AGREGADA**;
+  
+  - **DEMANDA AGREGADA** (OU DESPESA AGREGADA/CONSUMO AGREGADO).
+  
+  
+---
+<div style="text-align: justify">
+
+
+## INTRODUÇÃO
+
+
+**CONCEITOS**
+
+
+</br>
+  
+  
+- **PRODUTO AGREGADO**: Corresponde a **soma de valores (R$)** de todos os **bens (ou serviços) finais** 
+produzidos em um determinado **país** em um determinado **período de tempo** (**variável de fluxo**).
+
+
+</br>
+
+
+$$ Produto \ Agregado = \sum_{x = 1}^{n}P_iQ_i$$
+
+
+- Variáveis:
+
+  - $P_i =$ Preço do **bem (ou serviço) final** i;
+  
+  - $Q_i =$ Quantidade produzida do **bem (ou serviço) final** i;
+  
+  - $i =$ **bem (ou serviço) final** $(i = 1, 2, 3, ..., n)$
+  
+  
+---
+<div style="text-align: justify">
+
+
+## INTRODUÇÃO
+
+
+**CONCEITOS**
+
+
+</br>
+
+
+- **BEM (OU SERVIÇO) FINAL**: São bens e serviços que **não são utilizados** em nenhuma etapa de um 
+processo de produção, isto é, não são insumos de produção. 
+
+
+</br>
+
+
+- **BEM (OU SERVIÇO) INTERMEDIÁRIO**: São bens e serviços que **são utilizados** em nenhuma etapa de um 
+processo de produção, isto é, são insumos de produção. 
+
+
+</br>
+
+
+- Para entender melhor a definição de produto agregado, bens finais e bens intermediários, vamos 
+partir de um exemplo teórico de uma economia que produz apenas um bem final: o pão.
+
+
+---
+<div style="text-align: justify">
+
+
+## INTRODUÇÃO
+
+
+**PREMISSAS DO EXEMPLO**
+
+
+  - **3 Processos Produtivos**: Produção de Trigo, Produção de Farinha de Trigo e 
+  Produção de Pão;
+  
+  - **Bens Intermediários**: Trigo e Farinha (são insumos de produção);
+  
+  - **Bens Finais**: Pão (não é insumo de produção).
+
+
+```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
+
+
+library(magrittr)
+
+
+library(kableExtra)
+
+
+cronograma <- data.frame(
+  
+  a = c('TRIGO', 'FARINHA', 'PÃO'),
+  
+  b = c('R$ 0', 'R$ 15', 'R$ 15'),
+  
+  c = c('R$ 15', 'R$ 35', 'R$ 60'),
+  
+  d = c('R$ 15', 'R$ 20', 'R$ 25'))
+
+knitr::kable(cronograma, 
+             
+             escape = FALSE,
+    
+             format = 'html',
+             
+             col.names = c('PRODUTO', 'PREÇO DO INSUMO (custo de produção)', 
+                           
+                           'PREÇO DO PRODUTO (preço de venda)', 
+                           
+                           'VALOR ADICIONADO (valor agregado)'),
+             
+             align = c('c', 'c', 'c', 'c')) %>%
+  
+  kable_styling(bootstrap_options = 'striped')
+  
+
+```
+
+
+---
+<div style="text-align: justify">
+
+
+## INTRODUÇÃO
+
+
+```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
+
+
+library(magrittr)
+
+
+library(kableExtra)
+
+
+cronograma <- data.frame(
+  
+  a = c('TRIGO', 'FARINHA', 'PÃO'),
+  
+  b = c('R$ 0', 'R$ 15', 'R$ 15'),
+  
+  c = c('R$ 15', 'R$ 35', 'R$ 60'),
+  
+  d = c('R$ 15', 'R$ 20', 'R$ 25'))
+
+knitr::kable(cronograma, 
+             
+             escape = FALSE,
+    
+             format = 'html',
+             
+             col.names = c('PRODUTO', 'PREÇO DO INSUMO (custo de produção)', 
+                           
+                           'PREÇO DO PRODUTO (preço de venda)', 
+                           
+                           'VALOR ADICIONADO (valor agregado)'),
+             
+             align = c('c', 'c', 'c', 'c')) %>%
+  
+  kable_styling(bootstrap_options = 'striped')
+  
+
+```
+
+
+**DEFINIÇÕES**
+
+
+  - Como existem 3 processos produtivos, também existem **3 custos de produção** e 3 **preços de venda**
+  (um para cada processo produtivo);
+  
+  
+  - O custo de produção de um processo de produção é, justamente, igual ao preço de venda do processo
+  de produção anterior (ou processo de produção fornecedor);
+
+  
+  - Em cada processo de produção, a **diferença entre o preço de venda e o custo de produção** gera o 
+  respectivo **valor adicionado** (ou valor agregado).
+  
+
+---
+<div style="text-align: justify">
+
+
+## INTRODUÇÃO
+
+
+```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
+
+
+library(magrittr)
+
+
+library(kableExtra)
+
+
+cronograma <- data.frame(
+  
+  a = c('TRIGO', 'FARINHA', 'PÃO'),
+  
+  b = c('R$ 0', 'R$ 15', 'R$ 15'),
+  
+  c = c('R$ 15', 'R$ 35', 'R$ 60'),
+  
+  d = c('R$ 15', 'R$ 20', 'R$ 25'))
+
+knitr::kable(cronograma, 
+             
+             escape = FALSE,
+    
+             format = 'html',
+             
+             col.names = c('PRODUTO', 'PREÇO DO INSUMO (custo de produção)', 
+                           
+                           'PREÇO DO PRODUTO (preço de venda)', 
+                           
+                           'VALOR ADICIONADO (valor agregado)'),
+             
+             align = c('c', 'c', 'c', 'c')) %>%
+  
+  kable_styling(bootstrap_options = 'striped')
+  
+
+```
+
+
+**DEFINIÇÕES**
+
+
+  - O valor de venda de um processo de produção é igual a soma entre o custo de produção e o 
+  valor adicionado do respectivo processo;
+  
+  
+  - Por sua vez, como visto, o custo de produção de um processo produtivo é igual ao valor de venda 
+  do processo de produção anterior (ou do processo de produção do fornecedor). Assim, o valor de venda
+  de um produto já leva em consideração os valores de venda dos processos produtivos anteriores;
+
+  
+  - Por este motivo, o Produto Agregado não soma os valores de venda de cada produto, evitando o erro
+  da dupla contagem.
+  
+  
+---
+<div style="text-align: justify">
+
+
+## INTRODUÇÃO
+
+
+```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
+
+
+library(magrittr)
+
+
+library(kableExtra)
+
+
+cronograma <- data.frame(
+  
+  a = c('TRIGO', 'FARINHA', 'PÃO'),
+  
+  b = c('R$ 0', 'R$ 15', 'R$ 15'),
+  
+  c = c('R$ 15', 'R$ 35', 'R$ 60'),
+  
+  d = c('R$ 15', 'R$ 20', 'R$ 25'))
+
+knitr::kable(cronograma, 
+             
+             escape = FALSE,
+    
+             format = 'html',
+             
+             col.names = c('PRODUTO', 'PREÇO DO INSUMO (custo de produção)', 
+                           
+                           'PREÇO DO PRODUTO (preço de venda)', 
+                           
+                           'VALOR ADICIONADO (valor agregado)'),
+             
+             align = c('c', 'c', 'c', 'c')) %>%
+  
+  kable_styling(bootstrap_options = 'striped')
+  
+
+```
+
+
+**DEFINIÇÕES**
+
+
+  - 
+  
+  
+  - 
+
+  
+  - 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+class: inverse, center, middle 
+name: fcr_simplificado
+
+
+## FLUXO CIRCULAR DA RENDA </br> (SIMPLIFICADO)
+
+
+---
+<div style="text-align: justify">
+
+
+## FLUXO CIRCULAR DA RENDA (SIMPLIFICADO)
 
 
 **CONCEITO**
@@ -85,3 +487,53 @@ name:
 
 
 - Início da apresentação.
+
+---
+class: inverse, center, middle 
+name: fcr_ampliado
+
+
+## FLUXO CIRCULAR DA RENDA </br> (AMPLIADO)
+
+
+---
+<div style="text-align: justify">
+
+
+## FLUXO CIRCULAR DA RENDA (AMPLIADO)
+
+
+**CONCEITO**
+
+
+</br>
+
+
+- Início da apresentação.
+
+
+---
+class: inverse, center, middle 
+name: pib
+
+
+## PRODUTO INTERNO BRUTO </br> (PIB)
+
+
+---
+<div style="text-align: justify">
+
+
+## PRODUTO INTERNO BRUTO (PIB)
+
+
+**CONCEITO**
+
+
+</br>
+
+
+- Início da apresentação.
+
+
+
