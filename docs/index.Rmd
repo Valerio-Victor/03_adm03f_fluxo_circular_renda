@@ -711,7 +711,7 @@ de causa e efeito, mas apenas de uma identidade de valores);
 
 <div style="text-align: center">
 
-###PRODUTO AGREGADO = RENDA AGREGADA = DESPESA AGREGADA
+###PRODUTO AGREGADO = RENDA AGREGADA = DEMANDA AGREGADA
 
 </br>
 <div style="text-align: justify">
@@ -724,7 +724,7 @@ de 3 óticas:
   - **Ótica da Renda**: Soma das rendas obtidos a partir do uso dos fatores de produção de um país em 
   um determinado período de tempo;
   
-  - **Ótica da Despesa**: soma de todos os consumos de bens e serviços finais de uma economia em um 
+  - **Ótica da Demanda**: soma de todos os consumos de bens e serviços finais de uma economia em um 
   determinado período de tempo. 
   
   
@@ -1038,7 +1038,7 @@ class: inverse
 
 
 
-knitr::include_graphics('../figuras/fcr_simplificado.png', dpi = 300)
+knitr::include_graphics('fcr_simplificado.png', dpi = 300)
 
 
 
@@ -1149,7 +1149,7 @@ class: inverse
 
 
 
-knitr::include_graphics('../figuras/fcr_ampliado.png', dpi = 300)
+knitr::include_graphics('fcr_ampliado.png', dpi = 300)
 
 
 
