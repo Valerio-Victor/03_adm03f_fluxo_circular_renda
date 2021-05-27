@@ -438,22 +438,26 @@ agregados_macroeconomicos <- sidrar::get_sidra(api = '/t/1621/n1/all/v/all/p/all
 
   dplyr::select(date, valor, setores_e_subsetores) %>%
 
-  dplyr::mutate(setores_e_subsetores = dplyr::case_when(setores_e_subsetores == 'PIB a preços de mercado' ~ 'PIB a preços de mercado - PIB (Y)',
+  dplyr::mutate(setores_e_subsetores = dplyr::case_when(setores_e_subsetores == 'PIB a preços de mercado' ~ 'PIB a preços de mercado (Y)',
 
-                                                        setores_e_subsetores == 'Despesa de consumo das famílias' ~ 'Despesa de consumo das famílias - Consumo das Famílias (C)',
+                                                        setores_e_subsetores == 'Despesa de consumo das famílias' ~ 'Consumo das Famílias (C)',
 
-                                                        setores_e_subsetores == 'Formação bruta de capital fixo' ~ 'Formação bruta de capital fixo - Investimento Privado (I)',
+                                                        setores_e_subsetores == 'Formação bruta de capital fixo' ~ 'Investimento Privado (I)',
 
-                                                        setores_e_subsetores == 'Despesa de consumo da administração pública' ~ 'Despesa de consumo da administração pública - Gastos do Governo (G)',
+                                                        setores_e_subsetores == 'Despesa de consumo da administração pública' ~ 'Gastos do Governo (G)',
 
-                                                        setores_e_subsetores == 'Exportação de bens e serviços' ~ 'Exportação de bens e serviços - Exportações (X)',
+                                                        setores_e_subsetores == 'Exportação de bens e serviços' ~ 'Exportações (X)',
 
-                                                        setores_e_subsetores == 'Importação de bens e serviços (-)' ~ 'Importação de bens e serviços - Importações (M)')) %>%
+                                                        setores_e_subsetores == 'Importação de bens e serviços (-)' ~ 'Importações (M)')) %>%
+
+
 
   tibble::view()
 
 
 agregados_macroeconomicos %>%
+
+  dplyr::filter(date > zoo::as.yearqtr(2004, Q1)) %>%
 
   ggplot2::ggplot() +
 
