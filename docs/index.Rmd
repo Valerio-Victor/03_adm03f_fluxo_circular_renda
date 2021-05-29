@@ -1,5 +1,5 @@
 ---
-title: 'FLUXO CIRCULAR DA RENDA </br> (AULA 03)'
+title: 'FLUXO CIRCULAR DA RENDA E AGREGADOS MACROECONÔMICOS </br> (AULA 03)'
 subtitle: 'ADM03F - Macroeconomia'
 author: 'Autor: Victor Valerio'
 date: 'Última atualização: `r format(Sys.Date(),"%d-%m-%Y")`'
@@ -25,10 +25,11 @@ style_mono_light(base_color = '#23395b')
 ```
 
 
-```{r xaringan-scribble, echo=FALSE}
-
+```{r , echo=FALSE}
+ 
 
 xaringanExtra::use_scribble()
+
 
 xaringanExtra::use_search(show_icon = TRUE)
 
